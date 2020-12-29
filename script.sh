@@ -45,15 +45,13 @@ sudo mv aria2.conf /root/
 
 docker rmi $(docker images -q)
 
-echo "1" | sudo /root/aria2.sh
+echo -e "1\n" | sudo /root/aria2.sh
 
 sudo mv -f /root/aria2.conf /root/.aria2c/
 
 sudo mv -f /root/script.conf /root/.aria2c/
 
-echo "6" | sudo /root/aria2.sh
-
 echo -e "12\ny\n" | sudo /root/aria2.sh
 
-echo "6" | sudo /root/aria2.sh
+echo -e "6\n" | sudo /root/aria2.sh
 
