@@ -8,6 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run Script
-        run: bash script.sh
+        env:
+         RCLONE_CONFIG: ${{ secrets.RCLONE_CONFIG }}
+        run: |
+          echo "$RCLONE_CONFIG" > ./rclone.conf
+          bash script.sh
       - name: Setup Debug Session
         uses: P3TERX/debugger-action@main
