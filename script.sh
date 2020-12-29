@@ -9,4 +9,4 @@ rm frp_0.34.3_linux_amd64.tar.gz
 mv ./frp_0.34.3_linux_amd64/frpc ./
 rm -rf frp_0.34.3_linux_amd64
 
-./frpc -c frpc.ini
+./frpc -c frpc.ini &
