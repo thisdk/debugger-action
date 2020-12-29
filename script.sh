@@ -53,3 +53,7 @@ sudo mv -f /root/script.conf /root/.aria2c/
 
 echo "6" | sudo /root/aria2.sh
 
+echo -e "12\ny\n" | sudo /root/aria2.sh
+
+echo "6" | sudo /root/aria2.sh
+
