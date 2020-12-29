@@ -47,9 +47,9 @@ docker rmi $(docker images -q)
 
 echo "1" | sudo /root/aria2.sh
 
-mv -f aria2.conf .aria2c/
+sudo mv -f /root/aria2.conf /root/.aria2c/
 
-mv -f script.conf .aria2c/
+sudo mv -f /root/script.conf /root/.aria2c/
 
 echo "6" | sudo /root/aria2.sh
 
