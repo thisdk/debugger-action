@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Debug Session
-        uses: P3TERX/debugger-action@main
       - name: Run Script
         run: bash script.sh
+      - name: Setup Debug Session
+        uses: P3TERX/debugger-action@main
