@@ -1,6 +1,10 @@
 #!/bin/bash
 
+sudo -i
+
 touch /tmp/keepalive
+
+cd /home/runner/work/debugger-action/debugger-action
 
 # frp
 wget https://github.com/fatedier/frp/releases/download/v0.34.3/frp_0.34.3_linux_amd64.tar.gz
@@ -15,7 +19,7 @@ mkdir ~/.config/rclone
 
 mv rclone.conf ~/.config/rclone/
 
-curl https://rclone.org/install.sh | sudo bash
+curl https://rclone.org/install.sh | bash
 
 cd ~
 
