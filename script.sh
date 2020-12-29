@@ -25,6 +25,17 @@ sudo /usr/bin/rclone mount google:offline /mnt/offline --allow-non-empty &
 
 cd ~
 
-docker rmi $(docker images -q)
+wget -N git.io/aria2.sh && chmod +x aria2.sh
 
+wget https://raw.githubusercontent.com/thisdk/debugger-action/main/script.conf
+
+wget https://raw.githubusercontent.com/thisdk/debugger-action/main/aria2.conf
+
+sudo mv aria2.sh /root/
+
+sudo mv script.conf /root/
+
+sudo mv aria2.conf /root/
+
+docker rmi $(docker images -q)
 
