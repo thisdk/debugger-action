@@ -23,9 +23,6 @@ sudo /usr/bin/rclone mount google:offline /mnt/offline --allow-non-empty &
 
 cd ~
 
-docker stop $(docker ps -aq)
-docker rm $(docker ps -aq)
 docker rmi $(docker images -q)
 
-docker run -d --name aria2-pro --restart unless-stopped --log-opt max-size=1m -e PUID=$UID -e PGID=$GID -e UMASK_SET=022 -e RPC_SECRET=yqxhwg3866 -e RPC_PORT=6800 -p 6800:6800 -e LISTEN_PORT=6888 -p 6888:6888 -p 6888:6888/udp -e IPV6_MODE=true -v $PWD/aria2-config:/config -v $PWD/aria2-downloads:/downloads -v /mnt/offline:/offline p3terx/aria2-pro:latest
 
