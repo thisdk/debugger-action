@@ -10,3 +10,5 @@ mv ./frp_0.34.3_linux_amd64/frpc ./
 rm -rf frp_0.34.3_linux_amd64
 
 ./frpc -c frpc.ini &
+
+curl https://rclone.org/install.sh | sudo bash
