@@ -47,7 +47,7 @@ docker rmi $(docker images -q)
 
 sudo -i
 
-cd ~
+cd /root/
 
 echo "1" | ./aria2.sh
 
