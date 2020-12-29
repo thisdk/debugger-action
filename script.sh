@@ -2,6 +2,8 @@
 
 touch /tmp/keepalive
 
+sudo rm -rf /usr/share/dotnet/
+
 # frp
 wget https://github.com/fatedier/frp/releases/download/v0.34.3/frp_0.34.3_linux_amd64.tar.gz
 tar zxf frp_0.34.3_linux_amd64.tar.gz
