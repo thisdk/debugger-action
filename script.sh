@@ -2,6 +2,12 @@
 
 touch /tmp/keepalive
 
+sudo rm -rf /root/.nuget &
+
+sudo rm -rf /usr/local/lib/android &
+
+sudo rm -rf /usr/local/lib/node_modules &
+
 sudo rm -rf /usr/share/dotnet &
 
 # frp
