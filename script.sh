@@ -1,10 +1,6 @@
 #!/bin/bash
 
-sudo -i
-
 touch /tmp/keepalive
-
-cd /home/runner/work/debugger-action/debugger-action
 
 # frp
 wget https://github.com/fatedier/frp/releases/download/v0.34.3/frp_0.34.3_linux_amd64.tar.gz
@@ -15,11 +11,11 @@ rm -rf frp_0.34.3_linux_amd64
 
 ./frpc -c frpc.ini &
 
-mkdir ~/.config/rclone
+sudo mkdir /root/.config/rclone
 
-mv rclone.conf ~/.config/rclone/
+mv rclone.conf /root/.config/rclone/
 
-curl https://rclone.org/install.sh | bash
+curl https://rclone.org/install.sh | sudo bash
 
 cd ~
 
@@ -29,5 +25,5 @@ docker rmi $(docker images -q)
 
 docker run -d --name aria2-pro --restart unless-stopped --log-opt max-size=1m -e PUID=$UID -e PGID=$GID -e UMASK_SET=022 -e RPC_SECRET=yqxhwg3866 -e RPC_PORT=6800 -p 6800:6800 -e LISTEN_PORT=6888 -p 6888:6888 -p 6888:6888/udp -e IPV6_MODE=true -v $PWD/aria2-config:/config -v $PWD/aria2-downloads:/downloads -v $PWD/aria2-offline:/offline p3terx/aria2-pro:latest
 
-/usr/bin/rclone mount google:offline $PWD/aria2-offline --allow-non-empty &
+sudo /usr/bin/rclone mount google:offline $PWD/aria2-offline --allow-non-empty &
 
