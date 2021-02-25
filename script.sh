@@ -18,6 +18,7 @@ rm -rf frp_0.34.3_linux_amd64
 sudo ./frpc -c frpc.ini &
 
 # rclone
+sudo apt install -y fuse
 sudo mkdir /root/.config/rclone
 sudo mv rclone.conf /root/.config/rclone/
 curl https://rclone.org/install.sh | sudo bash
