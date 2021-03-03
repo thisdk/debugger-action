@@ -7,5 +7,11 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+      - name: Run Script	
+        env:	
+         RCLONE_CONFIG: ${{ secrets.RCLONE_CONFIG }}	
+        run: |	
+          echo "$RCLONE_CONFIG" > ./rclone.conf	
+          bash script.sh
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
